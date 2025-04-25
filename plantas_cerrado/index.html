@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas do Cerrado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color:#19663c;
+            margin: 0;
+            padding: 0;
+            background-color: #ffbb74;
+        }
+
+        header {
+            background-color: #19663c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.5em;
+            color: #f4c630;
+            text-shadow: 0.1em 0.1em 0.2em black
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #f4c630;
+            text-shadow: 0.1em 0.1em 0.2em black
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75vh;
+        }
+
+        .button {
+            width: 21%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .button p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .button h4 {
+            margin: 10px 0;
+            font-size: 1.7em;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .buttonc {
+            width: 58%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .buttonc img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .buttonc:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .buttonc h4 {
+            margin: 10px 0;
+            font-size: 1.7em;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 50%;
+                margin-bottom: 10px;
+            }
+
+            .buttonc {
+                width: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Plantas do Cerrado</h1>
+        <div>Clique na imagem da seção da vitrine para informações:</div>
+    </header>
+
+    <div class="button-container">
+        <div class="button">
+            <a href="v1.html">
+                <img src="vitrine_esq.jpg" alt="Vitrine lado esquerdo">
+            </a>
+            <h4>Monocotiledôneas</h4>
+        </div>
+        <div class="buttonc">
+            <a href="v2.html">
+                <img src="vitrine_centro.jpg" alt="Vitrine centro">
+            </a>
+            <h4>Árvores arbustos ervas e trepadeiras</h4>
+        </div>
+        <div class="button">
+            <a href="v3.html">
+                <img src="vitrine_dir.jpg" alt="Vitrine lado direito">
+            </a>
+            <h4>Monocotiledôneas</h4>
+        </div>
+    </div>
+
+</body>
+</html>
