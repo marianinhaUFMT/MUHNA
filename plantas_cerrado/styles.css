@@ -131,14 +131,15 @@ h1 {
 
 .modal-content {
     background-color: #BEDBB9;
-    padding: 20px;
-    padding-top: 50px; /* Espaço para o botão de fechar */
+    padding: 15px; /* Reduzido de 20px para menos espaço interno */
+    padding-top: 40px; /* Ajustado para manter espaço para o botão de fechar */
     border-radius: 8px;
-    max-width: 1200px;
-    max-height: 720px;
+    max-width: 880px; /* Reduzido de 1200px para diminuir a largura */
+    max-height: 720px; /* Reduzido de 720px para diminuir a altura */
     text-align: left;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Adicionado para rolagem caso o conteúdo exceda a altura */
 }
 
 .modal img {
@@ -182,12 +183,14 @@ h1 {
 }
 
 /* Configura as imagens dentro do mosaico */
-.mosaico img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.modal img {
+    max-width: 100%;
+    max-height: 300px; /* Limita a altura máxima de imagens e vídeos */
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+    object-fit: contain; /* Garante que o conteúdo se ajuste sem distorção */
+    cursor: pointer; /* Adiciona cursor de ponteiro para imagens */
+    transition: transform ease .3s; /* Adiciona transição suave */
 }
 /* Efeito de zoom ao passar o mouse */
 .mosaico img:hover {
@@ -195,12 +198,13 @@ h1 {
 }
 
 /* Configura os vídeos dentro do mosaico */
-.mosaico video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.modal video {
+    max-width: 100%;
+    max-height: 300px; /* Limita a altura máxima de imagens e vídeos */
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+    object-fit: contain; /* Garante que o conteúdo se ajuste sem distorção */
+    transition: transform ease .3s; /* Adiciona transição suave */
 }
 /* Efeito de zoom ao passar o mouse */
 .mosaico video:hover {
@@ -212,6 +216,45 @@ video {
     width: auto;
     height: 250px;
     object-fit: cover;
+}
+
+/* Novo modal para imagem em tela cheia */
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.fullscreen-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.fullscreen-close-btn:hover {
+    background-color: #ff2c2c;
 }
 
 
