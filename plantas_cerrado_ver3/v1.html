@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas do Cerrado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Monocotiledôneas</h1>
+        <div>(lado esquerdo da vitrine)</div>
+    </header>
+    <!-- Botão de Voltar -->
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Voltar ao menu principal</a>
+    </div>
+
+    <div class="plant-icons">
+        <!-- Ícones das Plantas - VITRINE-->
+        <div class="plant-icon" data-modal="modal1">
+            <img src="./fig/v1/01-sororoca/sororoca.jpg" alt="Sororoca">
+            <p>Sororoca</p>
+        </div>
+        <div class="plant-icon" data-modal="modal2">
+            <img src="./fig/v1/02-salsa_paredao/salsa_paredao.jpg" alt="Salsa Paredão">
+            <p>Salsa Paredão</p>
+        </div>
+        <div class="plant-icon" data-modal="modal3">
+            <img src="./fig/v1/03-imbe/imbe.jpg" alt="Imbé">
+            <p>Imbé</p>
+        </div>
+        <div class="plant-icon" data-modal="modal4">
+            <img src="./fig/v1/04-aruma/aruma.jpg" alt="Arumã">
+            <p>Arumã</p>
+        </div>
+    </div>
+    
+
+    <!-- Modals de Plantas -->
+    <!-- JANELAS COM INFORMAÇÕES-->
+
+    <!-- 01 - BANANEIRA BRAVA SOROROCA -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Fechar</button>
+            <h2>Bananeira Brava / Sororoca</h2>
+            <h4>Família: Strelitziaceae</h4>
+            <h4>Nome Científico: <em>Phenakospermum guyannense (Rich.) Endl. ex Miq.</em></h4>
+            <h4>Nome popular: "bananeira brava, sororoca"</h4>
+            <p>Usos: Ornamental. A sororoca é o único representante
+                da família nativo do Brasil, sendo encontrado na região amazônica.
+                <em>P. guyannense</em> é polinizada por ao menos duas espécies de
+                <em>Phyllostomus</em> (Phyllostomidae), morcegos nectarívoros (Kress &;
+                Stone 1993).</p>
+            <div class="mosaico">
+                <img src="./fig/v1/01-sororoca/f1_sororoca.jpg" alt="Sororoca">
+                <img src="./fig/v1/01-sororoca/f2_sororoca.jpg" alt="Sororoca">
+            </div>
+        </div>
+    </div>
+
+    <!-- 02 - SALSA PAREDAO -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Fechar</button>
+            <h2>Salsa Paredão</h2>
+            <h4>Família: Araceae</h4>
+            <h4>Nome Científico: <em>Anthurium bonplandii Bunting</em></h4>
+            <h4>Nome popular: "salsa paredão"</h4>
+            <p>Usos: Ornamental.</p>
+            <div class="mosaico">
+                <img src="./fig/v1/02-salsa_paredao/f1_salsa_paredao.jpg" alt="Salsa Paredão">
+                <img src="./fig/v1/02-salsa_paredao/f2_salsa_paredao.jpg" alt="Salsa Paredão">
+                <img src="./fig/v1/02-salsa_paredao/f3_salsa_paredao.jpg" alt="Salsa Paredão">
+                <img src="./fig/v1/02-salsa_paredao/f4_salsa_paredao.jpg" alt="Salsa Paredão">
+            </div>
+        </div>
+    </div>
+
+    <!-- 03 - IMBE -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Fechar</button>
+            <h2>Imbé</h2>
+            <h4>Família: Araceae</h4>
+            <h4>Nome Científico: <em>Philodendron acutatum Schott.</em></h4>
+            <h4>Nome popular: "imbé"</h4>
+            <p>Usos: Ornamental.</p>
+            <div class="mosaico">
+                <img src="./fig/v1/03-imbe/f1_imbe.jpg" alt="Imbé">
+                <img src="./fig/v1/03-imbe/f2_imbe.jpg" alt="Imbé">
+                <img src="./fig/v1/03-imbe/f3_imbe.jpg" alt="Imbé">
+            </div>
+        </div>
+    </div>
+
+    <!-- 04 - ARUMA -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Fechar</button>
+            <h2>Arumã</h2>
+            <h4>Família: Marantaceae</h4>
+            <h4>Nome Científico: <em>Ischnosiphon leucophaeus (Poepp. &amp; Endl.) Körn.</em></h4>
+            <h4>Nome popular: "arumã"</h4>
+            <p>Usos: Ornamental.</p>
+            <div class="mosaico">
+                <img src="./fig/v1/04-aruma/f1_aruma.jpg" alt="Arumã">
+                <img src="./fig/v1/04-aruma/f2_aruma.jpg" alt="Arumã">
+            </div>
+        </div>
+    </div>
+
+    <!-- INFORMACOES DA CERAMISTA -->
+    <div class="info">
+        <div class="info-text">
+            <p>As cerâmicas desta mostra foram feitas ceramista <strong>Sônia Chagas</strong>.</p>
+            <p>Sônia tem como fonte de inspiração a fauna e flora do Araguaia e do cerrado.
+            E tem com referência de criação de suas peças a cerâmica primitiva.</p>
+        </div>
+        <div class="info-img">
+            <img src="./qrcode_sonia.png" alt="QR Code Sônia Chagas">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

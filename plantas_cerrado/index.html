@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: "Georgia", "Times New Roman", Times, serif;
-            color:#397051;
+            color: #397051;
             margin: 0;
             padding: 0;
             background-color: #dbcdb6;
@@ -18,20 +18,53 @@
             color: black;
             text-align: center;
             padding: 30px;
+            position: relative;
         }
 
         h2 {
             margin: 0;
             font-size: 3.0em;
             color: #133e25;
-            text-shadow: 0.1em 0.1em 0.2em rgb(19, 85, 39)
+            text-shadow: 0.1em 0.1em 0.2em rgb(19, 85, 39);
         }
 
         h3 {
             margin: 0;
-            font-size: 2.0em;
-            color: #bbda0bf0;
-            text-shadow: 0.1em 0.1em 0.2em rgb(10, 48, 22)
+            font-size: 2.5em;
+            color: #f4c630;
+            text-shadow: 0.1em 0.1em 0.2em rgb(10, 48, 22);
+        }
+
+        .curadoria-container {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .curadoria-button {
+            background-color: #f4c630;
+            color: #397051;
+            padding: 5px 10px; 
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em; 
+            transition: background-color 0.3s;
+        }
+
+        .curadoria-button:hover {
+            background-color: #1a5c34;
+        }
+
+        .curadoria-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .button-container {
@@ -104,14 +137,24 @@
                 width: 50%;
                 margin-bottom: 10px;
             }
+
+            .curadoria-container {
+                position: static;
+                transform: none;
+                justify-content: center;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h3>Clique na imagem da seção da vitrine para informações:</h3>
+        <h3>Toque nas imagens para mais informações:</h3>
         <h2>Plantas do Cerrado</h2>
+        <div class="curadoria-container">
+            <img src="placeHolderProfile.png" alt="Curadoria" class="curadoria-img">
+            <a href="curadora.html" class="curadoria-button">Curadoria</a>
+        </div>
     </header>
 
     <div class="button-container">
@@ -134,6 +177,5 @@
             <h4>Monocotiledôneas</h4>
         </div>
     </div>
-
 </body>
 </html>
