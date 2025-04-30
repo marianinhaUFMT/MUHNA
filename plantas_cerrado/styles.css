@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Georgia", "Times New Roman", Times, serif;
     background-color: #dbcdb6;
     text-align: center;
 }
@@ -14,7 +14,7 @@ header {
     background-color: #799a5f;
     color: white;
     text-align: center;
-    padding: 2px;
+    padding: 30px;
 }
 
 h1 {
@@ -86,7 +86,11 @@ h1 {
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     margin: 10px;
+    margin-top: 50px;
+    justify-items: center;
+    align-items: center;   
 }
+
 
 /*.plant-icons {
     display: flex;
@@ -134,7 +138,7 @@ h1 {
     padding: 15px; /* Reduzido de 20px para menos espaço interno */
     padding-top: 40px; /* Ajustado para manter espaço para o botão de fechar */
     border-radius: 8px;
-    max-width: 880px; /* Reduzido de 1200px para diminuir a largura */
+    max-width: 950px; /* Reduzido de 1200px para diminuir a largura */
     max-height: 720px; /* Reduzido de 720px para diminuir a altura */
     text-align: left;
     position: relative;
@@ -175,40 +179,33 @@ h1 {
 /* Configura o container do mosaico */
 .mosaico {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    /* número fixo de colunas (ajuste 3, 4, 5…) conforme cabe melhor no seu modal */
+    grid-template-columns: repeat(5, 1fr);
+    /* força cada linha a ter sempre 180px de altura */
+    grid-auto-rows: 180px;
+
+    gap: 10px;               /* espaçamento entre os itens */
+    justify-items: center;   /* centraliza conteúdo horizontalmente */
+    align-items: center;     /* centraliza conteúdo verticalmente */
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
+  }
 
 /* Configura as imagens dentro do mosaico */
-.modal img {
-    max-width: 100%;
-    max-height: 300px; /* Limita a altura máxima de imagens e vídeos */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    object-fit: contain; /* Garante que o conteúdo se ajuste sem distorção */
-    cursor: pointer; /* Adiciona cursor de ponteiro para imagens */
-    transition: transform ease .3s; /* Adiciona transição suave */
-}
-/* Efeito de zoom ao passar o mouse */
-.mosaico img:hover {
-    transform: scale(1.05);
+.mosaico img,
+.mosaico video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* preenche todo o “quadrado” sem distorcer */
+  border-radius: 8px;
+  transition: transform .3s ease;
 }
 
-/* Configura os vídeos dentro do mosaico */
-.modal video {
-    max-width: 100%;
-    max-height: 300px; /* Limita a altura máxima de imagens e vídeos */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    object-fit: contain; /* Garante que o conteúdo se ajuste sem distorção */
-    transition: transform ease .3s; /* Adiciona transição suave */
-}
 /* Efeito de zoom ao passar o mouse */
+.mosaico img:hover,
 .mosaico video:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 video {

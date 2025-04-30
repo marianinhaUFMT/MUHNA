@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantas do Cerrado</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: "Georgia", "Times New Roman", Times, serif;
@@ -35,10 +36,30 @@
             text-shadow: 0.1em 0.1em 0.2em rgb(10, 48, 22);
         }
 
+        h5 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #133e25;
+            text-shadow: 0.1em 0.1em 0.2em rgb(34, 120, 62);
+        }
+        h6 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #1a5c34;
+            text-shadow: 0.1em 0.1em 0.2em rgb(87, 151, 107);
+        }
+        
+        p {
+            color: #000000;
+
+        }
+
         .curadoria-container {
             position: absolute;
             top: 50%;
             right: 20px;
+            max-width: 1200px;
+            max-height: 800px;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -54,10 +75,12 @@
             border-radius: 5px;
             font-size: 1.2em; 
             transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .curadoria-button:hover {
-            background-color: #1a5c34;
+            background-color: #45a049;
         }
 
         .curadoria-img {
@@ -122,6 +145,7 @@
             margin: 10px 0;
             font-size: 1.7em;
         }
+        
 
         @media (max-width: 768px) {
             .button-container {
@@ -152,8 +176,8 @@
         <h3>Toque nas imagens para mais informações:</h3>
         <h2>Plantas do Cerrado</h2>
         <div class="curadoria-container">
-            <img src="placeHolderProfile.png" alt="Curadoria" class="curadoria-img">
-            <a href="curadora.html" class="curadoria-button">Curadoria</a>
+            <img src="icone_curadora.jpg" alt="Curadoria" class="curadoria-img">
+            <button class="curadoria-button" data-modal="modal-curadora">Curadoria</button>
         </div>
     </header>
 
@@ -177,5 +201,23 @@
             <h4>Monocotiledôneas</h4>
         </div>
     </div>
+
+    <!-- Modal da Curadora -->
+    <div id="modal-curadora" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Fechar</button>
+            <h5>Curadora da coleção Botânica do MuHNA</h5>
+            <h6>Professora Dra. Maryland Sanchez Lacerda</h6>
+            <p>Possui graduação em Ciências Biológicas pela Universidade Federal de Uberlândia (1989), mestrado em Ciências Biológicas (Biologia Vegetal) pela Universidade Estadual Paulista Júlio de Mesquita Filho (1994) e doutorado em Biologia Vegetal pela Universidade Estadual de Campinas (2001). Atualmente é professora Titular da Universidade Federal de Mato Grosso, Curadora do Herbário do Campus Universitário do Araguaia e Curadora da coleção botânica do MuHNA. Orienta no Programa de Pós-graduação em Biologia Vegetal da UFMT. Sua área de pesquisa é a Ecologia Vegetal, com ênfase em florística, fitossociologia, dinâmica e fenologia das comunidades vegetais, trabalhando principalmente nos Biomas Cerrado e Mata Atlântica.</p>
+            <div class="mosaico">
+                <img src="f1_curadora.jpg" class="modal-img" loading="lazy">
+                <img src="f2_curadora.jpg" class="modal-img" loading="lazy">
+                <img src="f3_curadora.jpg" class="modal-img" loading="lazy">
+                <img src="f4_curadora.jpg" class="modal-img" loading="lazy">
+                <img src="f5_curadora.jpg" class="modal-img" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
